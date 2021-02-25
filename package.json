@@ -1,0 +1,26 @@
+{
+  "name": "cicd-ingter-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/* --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivakrishna51/CICD-Ingter-Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivakrishna51/CICD-Ingter-Node/issues"
+  },
+  "homepage": "https://github.com/shivakrishna51/CICD-Ingter-Node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.0",
+    "supertest": "^6.1.3"
+  }
+}
