@@ -34,7 +34,11 @@ jobs:
     steps:
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
-      with:      
+      with:        
+        host: ${{ 3.6.246.58 }}
+        username: ${{ ubuntu }}
+        key: ${{ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzVoTFG7KH7spkvM0OF95VBlee1H2WyX3yDKlbXcTwnkoICyQZP4X6hxXGzIHqUXPHknmtMlLc8eEgHRpozukJEeJYh5m/iSrY80T67Pt5c+uDGtyZ1W2zqwls/t9TF3rniB2mqKUZlklxVAsaZY11FKV0sUW5O3yJSCZuQzEjaC55JZz2IXIMaDdF02YIb+6bnuvE6tuqefs4jjZQhHy/sBRPD8cqaHJNRpk2Rwk4Ev+H1J/wMy+1ck4OdlJnWAIc+2Dh412ElLxIo7RLoOdOl+9TrwCZxxpiPOP8FfBLKToLRiD4k7RMWejuLVyOLobh+Jw0UPZoI6H7/d+QDP1v walldentdev }}
+        port: ${{ 22 }}
         script: |
           cd ~/CICD-Ingter-Node
           git pull origin master
