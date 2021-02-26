@@ -34,11 +34,7 @@ jobs:
     steps:
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+      with:      
         script: |
           cd ~/CICD-Ingter-Node
           git pull origin master
