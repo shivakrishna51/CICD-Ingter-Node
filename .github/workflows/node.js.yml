@@ -22,23 +22,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install 
       run: |
-        npm install        
-      env:
-        CI: true
-  deploy:
-    
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: SSH and deploy node app
-      uses: appleboy/ssh-action@master
-      with:        
-         host: ${{ secrets.SSH_HOST}}
-         username: ${{ secrets.SSH_USERNAME }}
-         key: ${{ secrets.SSH_KEY }}
-         port: ${{ secrets.SSH_PORT }}
-         script: |
-          cd ~/CICD-Ingter-Node
-          git pull origin master
-          npm install --production
-          pm2 restart node-app
+        npm install
+        npm build
+  
