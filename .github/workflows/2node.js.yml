@@ -27,3 +27,4 @@ jobs:
     - run: npm install
     - run: npm build 
     - run: npm run
+    - run:sudo pm2 restart deployApp
